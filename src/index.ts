@@ -1,12 +1,10 @@
-// @see: https://github.com/microsoft/TypeScript/blob/master/src/compiler/checker.ts
-
 function levenshteinWithMax(
   str1: string,
   str2: string,
   max: number,
 ): number | undefined {
-  let previous = new Array(str2.length + 1) // eslint-disable-line
-  let current = new Array(str2.length + 1) // eslint-disable-line
+  let previous = new Array(str2.length + 1)
+  let current = new Array(str2.length + 1)
 
   /** Represents any value > max. We don't care about the particular value. */
   const big = max + 1
@@ -54,6 +52,8 @@ function levenshteinWithMax(
   const res = previous[str2.length]
   return res > max ? undefined : res
 }
+
+// @see: https://github.com/microsoft/TypeScript/blob/master/src/compiler/checker.ts
 
 /**
  * Given a name and a list of names that are not equal to the name, return a
