@@ -31,7 +31,7 @@ jobs:
           env_name: bot_token
 
       - name: 📦　Semantic Release
-        run: yarn srm
+        run: yarn semantic-release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
