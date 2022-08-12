@@ -29,7 +29,7 @@ describe('getSpellingSuggestion', () => {
     ).toEqual('Foo')
   })
 
-  it('should return the undefined when no match found', () => {
+  it('should return undefined when no match found', () => {
     expect(
       getSpellingSuggestion('fo', ['fo', 'foo', 'book', 'cook', 'food']),
     ).toBeUndefined()

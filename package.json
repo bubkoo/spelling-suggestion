@@ -69,7 +69,7 @@
     "@bubkoo/tsconfig": "^1.0.0",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@semantic-release-monorepo/cli": "^1.0.18",
+    "@semantic-release-monorepo/cli": "^1.0.19",
     "@types/jest": "^28.1.6",
     "coveralls": "^3.1.1",
     "eslint": "^8.21.0",
