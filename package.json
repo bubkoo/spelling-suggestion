@@ -1,0 +1,103 @@
+{
+  "name": "spelling-suggestion",
+  "version": "1.0.0",
+  "description": "Given a name and a list of names that are not equal to the name, return a spelling suggestion if there is one that is close enough.",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "dist/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "dist",
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "spelling-suggestion",
+    "spelling",
+    "suggestion",
+    "levenshtein",
+    "leven",
+    "compare",
+    "algorithm",
+    "match",
+    "matching",
+    "search",
+    "comparison",
+    "similarity",
+    "similar",
+    "diff",
+    "difference"
+  ],
+  "scripts": {
+    "lint": "eslint 'src/**/*.{js,ts}?(x)' --fix",
+    "clean": "rimraf dist es lib",
+    "build:esm": "tsc --module esnext --target es2017 --outDir ./es",
+    "build:cjs": "tsc --module commonjs --target es5 --outDir ./lib",
+    "build:umd": "rollup -c",
+    "build": "run-s build:esm build:cjs build:umd",
+    "prebuild": "run-s lint clean",
+    "test": "jest",
+    "test:debug": "node --nolazy --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --colors --verbose",
+    "coveralls": "cat ./test/coverage/lcov.info | coveralls",
+    "pretest": "rimraf ./test/coverage",
+    "prepare": "is-ci || husky install"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,tsx,ts,less,md,json}": [
+      "pretty-quick — staged"
+    ],
+    "*.ts": [
+      "eslint --fix"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "release": {
+    "extends": "@bubkoo/semantic-release-config"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "bubkooo",
+    "email": "bubkoo.wy@gmail.com"
+  },
+  "devDependencies": {
+    "@bubkoo/eslint-config": "^1.1.0",
+    "@bubkoo/rollup-config": "^1.0.3",
+    "@bubkoo/semantic-release-config": "^1.3.0",
+    "@bubkoo/tsconfig": "^1.0.0",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^17.0.3",
+    "@semantic-release-monorepo/cli": "^1.0.18",
+    "@types/jest": "^28.1.6",
+    "coveralls": "^3.1.1",
+    "eslint": "^8.21.0",
+    "husky": "^8.0.1",
+    "is-ci": "^3.0.1",
+    "jest": "^28.1.3",
+    "lint-staged": "^13.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1",
+    "pretty-quick": "^3.1.3",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.77.2",
+    "semantic-release": "^19.0.3",
+    "ts-jest": "^28.0.7",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bubkoo/spelling-suggestion.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bubkoo/spelling-suggestion/issues"
+  },
+  "homepage": "https://github.com/bubkoo/spelling-suggestion#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
