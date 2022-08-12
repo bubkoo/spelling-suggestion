@@ -23,7 +23,7 @@ Names less than length 3 only check for case-insensitive equality, not Levenshte
 - If there is a candidate that's the same except for case, return that.
 - If there is a candidate that's within one edit of the name, return that.
 - Otherwise, return the candidate with the smallest Levenshtein distance, except for candidates: 
-  - With no name 
+  - With no name
   - Whose length differs from the target name by more than 0.34 of the length of the name. 
   - Whose levenshtein distance is more than 0.4 of the length of the name (0.4 allows 1 substitution/transposition for every 5 characters, and 1 insertion/deletion at 3 characters)
 
@@ -46,24 +46,18 @@ getSpellingSuggestion(
 // => { name: 'food' }
 
 // return the best matched string
-getSpellingSuggestion('foo', ['fo', 'foo', 'book', 'cook', 'food'])
-// => food
+getSpellingSuggestion('foo', ['fo', 'foo', 'book', 'cook', 'food']) // => food
 
 // return the best matched string with case-insensitive equality
-getSpellingSuggestion('foo', ['fo', 'Foo', 'book', 'cook', 'food'])
-// => Foo
+getSpellingSuggestion('foo', ['fo', 'Foo', 'book', 'cook', 'food']) // => Foo
 
 // return undefined when no match found
-getSpellingSuggestion('fo', ['fo', 'foo', 'book', 'cook', 'food'])
-// => undefined
+getSpellingSuggestion('fo', ['fo', 'foo', 'book', 'cook', 'food']) // => undefined
 
 // return the first best match
-getSpellingSuggestion('foo', ['fo', 'foo', 'food', 'fooo', 'fook'])
-// => food
-getSpellingSuggestion('foo', ['fo', 'foo', 'fook', 'food', 'fooo'])
-// => fook
-getSpellingSuggestion('foo', ['fo', 'foo', 'fooo', 'fook', 'food']),
-// => fooo
+getSpellingSuggestion('foo', ['fo', 'foo', 'food', 'fooo', 'fook']) // => food
+getSpellingSuggestion('foo', ['fo', 'foo', 'fook', 'food', 'fooo']) // => fook
+getSpellingSuggestion('foo', ['fo', 'foo', 'fooo', 'fook', 'food']) // => fooo
 ```
 
 
