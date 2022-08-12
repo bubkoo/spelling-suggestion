@@ -37,7 +37,6 @@
     "build": "run-s build:esm build:cjs build:umd",
     "prebuild": "run-s lint clean",
     "test": "jest",
-    "test:debug": "node --nolazy --inspect-brk ./node_modules/jest/bin/jest.js --runInBand --colors --verbose",
     "coveralls": "cat ./test/coverage/lcov.info | coveralls",
     "pretest": "rimraf ./test/coverage",
     "prepare": "is-ci || husky install"
