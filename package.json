@@ -1,6 +1,6 @@
 {
   "name": "spelling-suggestion",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Given a name and a list of names that are not equal to the name, return a spelling suggestion if there is one that is close enough.",
   "main": "lib/index.js",
   "module": "es/index.js",
