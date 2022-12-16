@@ -6,10 +6,8 @@
 <a href="/LICENSE"><img src="https://img.shields.io/github/license/bubkoo/spelling-suggestion?style=flat-square" alt="MIT License"></a>
 <a href="https://www.typescriptlang.org"><img alt="Language" src="https://img.shields.io/badge/language-TypeScript-blue.svg?style=flat-square"></a>
 <a href="https://github.com/bubkoo/spelling-suggestion/pulls"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-Welcome-brightgreen.svg?style=flat-square"></a>
-<a href="https://github.com/bubkoo/spelling-suggestion/actions/workflows/ci.yml"><img alt="build" src="https://img.shields.io/github/workflow/status/bubkoo/spelling-suggestion/%F0%9F%91%B7%E3%80%80CI/master?logo=github&style=flat-square"></a>
-<a href="https://app.codecov.io/gh/bubkoo/spelling-suggestion"><img alt="coverage" src="https://img.shields.io/codecov/c/gh/bubkoo/spelling-suggestion?logo=codecov&style=flat-square&token=BWweeU2uNX"></a>
-<a href="https://lgtm.com/projects/g/bubkoo/spelling-suggestion/context:javascript" rel="nofollow"><img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/bubkoo/spelling-suggestion.svg?logo=lgtm&style=flat-square" /></a>
-</p>
+<a href="https://github.com/bubkoo/spelling-suggestion/actions/workflows/ci.yml"><img alt="build" src="https://img.shields.io/github/actions/workflow/status/bubkoo/spelling-suggestion/ci.yml?branch=master&logo=github&style=flat-square"></a>
+<a href="https://app.codecov.io/gh/bubkoo/spelling-suggestion"><img alt="coverage" src="https://img.shields.io/codecov/c/gh/bubkoo/spelling-suggestion?logo=codecov&style=flat-square&token=BWweeU2uNX"></a></p>
 
 ## Install
 
